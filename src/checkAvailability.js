@@ -18,11 +18,11 @@ const SITES_TO_CHECK = [
       "https://www.amazon.nl/Sony-PlayStation-PlayStation%C2%AE5-Console/dp/B08H93ZRK9",
     buttonSelector: "#buybox-see-all-buying-choices",
   },
-  {
-    url:
-      "https://www.amazon.co.uk/PlayStation-9395003-5-Console/dp/B08H95Y452/",
-    buttonSelector: "#buybox-see-all-buying-choices",
-  },
+  // {
+  //   url:
+  //     "https://www.amazon.co.uk/PlayStation-9395003-5-Console/dp/B08H95Y452/",
+  //   buttonSelector: "#buybox-see-all-buying-choices",
+  // },
   {
     url: "https://www.coolblue.nl/product/865866/playstation-5.html",
     buttonSelector: ".js-add-to-cart-button",
