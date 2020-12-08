@@ -56,9 +56,9 @@ const runAvailabilityCheck = () => {
       .then((html) => {
         const doc = parser.parse(html);
         const buyButton = doc.querySelector(site.buttonSelector);
-        if (!buyButton) {
+        if (buyButton) {
           utils.sendUpdate({
-            text: "Stock is available here" + site.url,
+            text: "Stock is available here " + site.url,
           });
         }
       });
