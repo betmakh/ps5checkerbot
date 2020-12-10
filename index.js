@@ -8,7 +8,8 @@ const stats = {
   lastRun: "never",
 };
 
-schedule.scheduleJob("*/5 * * * *", function () {
+console.log("The checker has started at: " + new Date());
+schedule.scheduleJob(`*/${process.env.CHECK_FREQUENCY || 5} * * * *`, function () {
   const time = new Date();
   console.log("run check at " + new Date());
   stats.totalRuns++;
