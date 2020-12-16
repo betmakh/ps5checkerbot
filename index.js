@@ -9,6 +9,7 @@ const stats = {
 };
 
 console.log("The checker has started at: " + new Date());
+utils.sendUpdate({ text: "The console checker has been started at: " + new Date() });
 schedule.scheduleJob(`*/${process.env.CHECK_FREQUENCY || 5} * * * *`, function () {
   const time = new Date();
   console.log("run check at " + new Date());
