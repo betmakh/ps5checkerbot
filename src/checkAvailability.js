@@ -20,6 +20,12 @@ console.log("SITES_TO_CHECK :", SITES_TO_CHECK);
 const runAvailabilityCheck = () => {
   SITES_TO_CHECK.forEach((site) => {
     fetch(site.url)
+    fetch(site.url, {
+      headers: {
+        "User-Agent":
+          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36",
+      },
+    })
       .then((resp) => {
         if (!resp.ok) {
           console.error(resp.statusText + " Error while fetching " + site.url);
